@@ -1,4 +1,7 @@
 /* style.css */
+.body{
+    margin-top: 70px;
+}
 .navbar-default{
     background: #fff;
     border: 0;
