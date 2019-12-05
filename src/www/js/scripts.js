@@ -42,3 +42,13 @@ sr.reveal('.info-right', {
     distance: '300px',
     viewFactor: 0.2
 });
+
+$function(){
+    // Smooth Scrolling
+    $('a[href*="#"]:not([href="#"])').click(function(){
+        if(location.pathname.replace(/ˆ\//,'') == this.pathname.replace(/ˆ\//,'') && location.hostname == this.hostname){
+            var target = $(this.hash);
+            target
+        }
+    });
+}
