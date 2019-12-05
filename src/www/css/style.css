@@ -1,6 +1,7 @@
 /* style.css */
 .body{
     margin-top: 70px;
+    font-size: 16px;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Poppins';
@@ -43,4 +44,7 @@ p{
 #testimonial p.costumer{
     font-size: 20px;
     color: #666;
+}
+#info1 .info-right{
+    margin-top: 90px;
 }
