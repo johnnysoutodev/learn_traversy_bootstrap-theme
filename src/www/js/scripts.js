@@ -43,12 +43,18 @@ sr.reveal('.info-right', {
     viewFactor: 0.2
 });
 
-$function(){
+$(function(){
     // Smooth Scrolling
     $('a[href*="#"]:not([href="#"])').click(function(){
-        if(location.pathname.replace(/ˆ\//,'') == this.pathname.replace(/ˆ\//,'') && location.hostname == this.hostname){
+        if(location.pathname.replace(/ˆ\//,'') == this.pathname.replace(/ˆ\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
-            target
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if(target.length){
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
         }
     });
-}
+});
